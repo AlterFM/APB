@@ -1,0 +1,169 @@
+/* style.css */
+
+/* Reset CSS */
+html, body, ul, ol, li, p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Tampilan halaman */
+body {
+    font-family: Arial, sans-serif;
+    background-color: greenyellow;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Tampilan tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+/* Gaya tombol tambah daftar */
+.add-button {
+    padding: 10px 20px;
+    background-color: #17b65f;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-size: medium;
+    margin: 20px auto;
+    display: block;
+    width: fit-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan pada tombol */
+}
+
+.add-button:hover {
+    background-color: #3c20a1;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Efek bayangan saat tombol dihover */
+}
+
+/* Gaya tombol edit dan hapus */
+.action-button {
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-button.edit {
+    background-color: #2196F3;
+}
+
+.action-button:hover {
+    background-color: #d32f2f;
+}
+
+.action-button.edit:hover {
+    background-color: #1976D2;
+}
+
+/* Tampilan halaman add dan edit */
+body {
+    background-color: #f7f7f7;
+}
+
+.form-container {
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Tombol JSON */
+.json-button {
+    padding: 10px 20px;
+    background-color: #ffa500;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-size: medium;
+    margin: 20px auto;
+    display: block;
+    width: fit-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan pada tombol */
+    text-decoration: none; /* Hilangkan garis bawah pada tautan */
+}
+
+.json-button:hover {
+    background-color: #ff8800;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Efek bayangan saat tombol dihover */
+}
+
+/* Tombol Pencarian */
+.search-button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
