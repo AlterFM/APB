@@ -32,27 +32,44 @@
                 <th>Aksi</th>
             </tr>
         </thead>
-        <tbody>
-            {% for p in pendaftaran %}
-            <tr>
-                <td>{{ p[0] }}</td>
-                <td>{{ p[1] }}</td>
-                <td>{{ p[2] }}</td>
-                <td>{{ p[3] }}</td>
-                <td>{{ p[4] }}</td>
-                <td>{{ p[5] }}</td>
-                <td>{{ p[6] }}</td>
-                <td>
-                    <a href="/edit/{{ p[0] }}">Edit</a>
-                    <a href="/delete/{{ p[0] }}">Hapus</a>
-                </td>
-            </tr>
-            {% endfor %}
+        <tbody id="item-registrations">
         </tbody>
     </table>
     <div id="Tampilan">
         <a href="/add" class="add-button">Tambah Pendaftaran</a>
         <a href="/get_json" class="json-button">Unduh Data JSON</a>
     </div>
+    <script type="text/javascript">
+        // Call your JavaScript functions to perform CRUD operations here
+        const itemCollection = document.getElementById('item-registrations');
+        console.log("Halo");
+        fetchItems();
+        function fetchItems() {
+            fetch('http://127.0.0.1:5000/get_json')
+                .then(resp => resp.json())
+                .then(renderItems);
+        }
+        function renderItems(items) {
+            console.log(items);
+            itemCollection.innerHTML = "";
+            items.forEach(function (item) {
+                itemCollection.innerHTML += `
+                <tr data-id=${item.id}>
+                    <td>${item.id}</td>
+                    <td>${item.tanggal_pendaftaran}</td>    
+                    <td>${item.nama}</td>
+                    <td>${item.alamat}</td>
+                    <td>${item.telepon}</td>
+                    <td>${item.jenis_kelamin}</td>
+                    <td>${item.jenis_kursus}</td>
+                    <td>
+                        <a href="/edit/${item.id}">Edit</a>
+                        <a href="/delete/${item.id}">Hapus</a>
+                    </td>
+                </tr>
+              `;
+            });
+        }
+    </script>
 </body>
 </html>
